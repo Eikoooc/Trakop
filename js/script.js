@@ -5,9 +5,9 @@ function toggleListItemName() {
 
   const updateName = () => {
     if (window.innerWidth <= 786) {
-      listItem.textContent = "Maszyny";
+      listItem.innerHTML = '<a href="#">Maszyny</a>';
     } else {
-      listItem.textContent = "Park Maszynowy";
+      listItem.innerHTML = '<a href="#">Park Maszynowy</a>';
     }
   };
 

@@ -1,0 +1,19 @@
+@keyframes arrowOne {
+    from{
+        transform: translate(-50%, 0);
+    }
+    to{
+        transform: translate(-50%, 1em);
+    }
+}
+
+@keyframes arrowTwo{
+    from{
+        transform: translate(-50%, 0);
+        opacity: 0;
+    }
+    to{
+        transform: translate(-50%, 1em);
+        opacity: 1;
+    }
+}
