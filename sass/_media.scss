@@ -1,0 +1,38 @@
+@media (width <= 786px){
+    .header{
+        .header-text{
+            .title{
+                font-size: 6.4rem;
+            }
+            .text-under{
+                font-size: 2rem;
+            }
+        }
+
+        &-nav{
+            .nav-list{
+                .nav-item{
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}
+
+@media (width <= 576px){
+    .header{
+        .header-text{
+            .title{
+                font-size: 4.7rem;
+                padding-bottom: 0.3em;
+            }
+            .text-under{
+                font-size: 1.8rem;
+            }
+        }
+
+        &-nav{
+            display: none;
+        }
+    }
+}

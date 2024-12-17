@@ -1,87 +1,120 @@
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
-	font-family: "PT Sans Caption", sans-serif;
-	height: 100vh;
-	font-size: 16px;
-	background-color: #333;
-	color: white;
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 1.6rem;
+  background-color: #333;
+  color: white;
 }
 
 .wrapper {
-	max-width: 1440px;
-	margin: 0 auto;
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
 }
 
 .header {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	height: 100%;
-	background-image: url("../img/header-img.jpg");
-	background-position: center;
-	background-size: cover;
-	z-index: 0;
-	.nav {
-		background-color: #fff;
-		font-size: 25px;
-		text-shadow: 0px 0px 10px rgb(3, 3, 3, 0.9);
-		.nav-list {
-			display: flex;
-			justify-content: space-evenly;
-			position: absolute;
-			top: 0;
-			left: 50%;
-			width: 50%;
-			list-style: none;
-			transform: translate(-50%);
-			.nav-item {
-				margin-top: 120px;
-				cursor: pointer;
-				transition: color 0.3s;
-			}
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1em;
+  height: 100vh;
+  background-image: url("../img/header-img.jpg");
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
 
-			.nav-item:hover {
-				color: #f7b939;
-			}
-		}
-	}
+  .logo {
+    position: absolute;
+    width: 15em;
+    height: 15em;
+    top: -3em;
+  }
 
-	.header-text {
-		text-align: center;
-		.header-title {
-			font-family: "Oswald", sans-serif;
-			letter-spacing: 10px;
-			font-weight: normal;
-			font-size: 120px;
-		}
-		.text-under {
-			display: inline-block;
-			font-size: 25px;
-		}
-		.line {
-			display: inline-block;
-			margin-bottom: 2px;
-			height: 2px;
-			width: 400px;
-			background-color: #fff;
-		}
-	}
+  &-nav {
+    position: relative;
+    top: 9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .nav-list {
+      display: flex;
+      justify-content: space-evenly;
+      list-style: none;
+      .nav-item {
+        padding: 1em;
+        font-size: 2rem;
+        text-shadow: 0px 0px 10px rgb(3, 3, 3, 0.9);
+        cursor: pointer;
+
+        a {
+          text-decoration: none;
+          color: white;
+          transition: color 0.3s;
+        }
+      }
+
+      .nav-item:hover a {
+        color: #f7b939;
+      }
+    }
+  }
+
+  &-text {
+    position: relative;
+    top: 50%;
+    transform: translateY(-100%);
+    text-align: center;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0, 0.6);
+
+    .title {
+      font-family: "Oswald", sans-serif;
+      line-height: 130%;
+      letter-spacing: 6px;
+      font-weight: normal;
+      font-size: 8.4rem;
+    }
+
+    .text-under {
+      font-size: 2.5rem;
+    }
+
+    .line {
+      position: relative;
+      margin-left: 0.5em;
+      top: -0.4em;
+      height: 3px;
+      width: 35%;
+      background-color: #fff;
+    }
+
+    .text-under,
+    .line {
+      display: inline-block;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: -1;
+  }
 }
 
-.header::after {
-	position: absolute;
-	content: "";
-	width: 100%;
-	height: 100%;
-	top: 0px;
-	left: 0px;
-	background-color: rgba(0, 0, 0, 0.5);
-	z-index: -1;
-}
+@import "./media";
