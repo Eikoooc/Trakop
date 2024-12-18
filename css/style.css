@@ -1,19 +1,25 @@
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: "PT Sans Caption", sans-serif;
-  height: 100vh;
-  font-size: 16px;
+  font-size: 1.6rem;
   background-color: #333;
   color: white;
 }
 
 .wrapper {
   max-width: 1440px;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -22,64 +28,105 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  height: 100%;
+  padding: 0 1em;
+  height: 100vh;
   background-image: url("../img/header-img.jpg");
   background-position: center;
   background-size: cover;
   z-index: 0;
 }
-.header .nav {
-  background-color: #fff;
-  font-size: 30px;
-  text-shadow: 0px 0px 10px rgba(3, 3, 3, 0.9);
+.header .logo {
+  position: absolute;
+  width: 15em;
+  height: 15em;
+  top: -3em;
 }
-.header .nav .nav-list {
+.header-nav {
+  position: relative;
+  top: 9em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-nav .nav-list {
   display: flex;
   justify-content: space-evenly;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 50%;
   list-style: none;
-  transform: translate(-50%);
 }
-.header .nav .nav-list .nav-item {
-  margin-top: 120px;
+.header-nav .nav-list .nav-item {
+  padding: 1em;
+  font-size: 2.3rem;
+  text-shadow: 0px 0px 5px rgba(3, 3, 3, 0.9);
   cursor: pointer;
+}
+.header-nav .nav-list .nav-item a {
+  text-decoration: none;
+  color: white;
   transition: color 0.3s;
 }
-.header .nav .nav-list .nav-item:hover {
+.header-nav .nav-list .nav-item:hover a {
   color: #f7b939;
 }
-.header .header-text {
+.header-text {
+  position: relative;
+  top: 50%;
+  transform: translateY(-100%);
   text-align: center;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
 }
-.header .header-text .header-title {
+.header-text .title {
   font-family: "Oswald", sans-serif;
-  letter-spacing: 10px;
+  line-height: 130%;
+  letter-spacing: 6px;
   font-weight: normal;
-  font-size: 120px;
+  font-size: 8.4rem;
 }
-.header .header-text .text-under {
-  display: inline-block;
-  font-size: 25px;
+.header-text .text-under {
+  font-size: 2.5rem;
 }
-.header .header-text .line {
-  display: inline-block;
-  margin-bottom: 2px;
-  height: 2px;
-  width: 400px;
+.header-text .line {
+  position: relative;
+  margin-left: 0.5em;
+  top: -0.4em;
+  height: 3px;
+  width: 35%;
   background-color: #fff;
 }
-
-.header::after {
-  position: absolute;
+.header-text .text-under,
+.header-text .line {
+  display: inline-block;
+}
+.header::before {
   content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  top: 0px;
-  left: 0px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.55);
   z-index: -1;
+}
+
+@media (width <= 786px) {
+  .header .header-text .title {
+    font-size: 6.4rem;
+  }
+  .header .header-text .text-under {
+    font-size: 2rem;
+  }
+  .header-nav .nav-list .nav-item {
+    font-size: 1.8rem;
+  }
+}
+@media (width <= 576px) {
+  .header .header-text .title {
+    font-size: 4.7rem;
+    padding-bottom: 0.3em;
+  }
+  .header .header-text .text-under {
+    font-size: 1.8rem;
+  }
+  .header-nav {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
