@@ -153,6 +153,15 @@ body {
   .header-nav .nav-list .nav-item {
     font-size: 1.8rem;
   }
+  .container {
+    display: block;
+  }
+  .card-carousel {
+    display: inline-block;
+  }
+  .carousel-text {
+    display: inline-block;
+  }
 }
 @media (width <= 576px) {
   .header .header-text .title {

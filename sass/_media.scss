@@ -17,6 +17,18 @@
             }
         }
     }
+
+    .container{
+        display: block;
+    }
+
+    .card-carousel{
+        display: inline-block;
+    }
+
+    .carousel-text{
+        display: inline-block;
+    }
 }
 
 @media (width <= 576px){
@@ -35,4 +47,8 @@
             display: none;
         }
     }
+
+    
+
+
 }

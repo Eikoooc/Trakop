@@ -143,7 +143,44 @@ body {
   z-index: -1;
 }
 
+.services {
+  display: flex;
+  justify-content: space-evenly;
+  text-transform: uppercase;
+}
+.services .line {
+  margin-top: 5px;
+  height: 2px;
+  width: 50px;
+  background-color: #f7b939;
+  transition: width 0.3s;
+}
+.services .service-text {
+  display: block;
+}
+.services .service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  margin: 50px;
+  text-align: center;
+  background-color: #222121;
+}
+.services .service:hover .line {
+  width: 80px;
+}
+.services .groupOne,
+.services .groupTwo,
+.services .groupThree {
+  display: flex;
+  flex-direction: column;
+}
+
 .carousel-text {
+  display: none;
   background-color: #2e2b2b;
   margin-top: 40px;
   padding: 20px;
@@ -168,12 +205,14 @@ html {
 }
 
 .container {
+  display: none;
   overflow: hidden;
   padding: 20px;
   margin-top: 2em;
 }
 
 .card-carousel {
+  display: none;
   --card-width: 80%;
   --card-max-width: 280px;
   --card-height: 350px;
@@ -298,6 +337,15 @@ h2 a {
   }
   .header-nav .nav-list .nav-item {
     font-size: 1.8rem;
+  }
+  .container {
+    display: block;
+  }
+  .card-carousel {
+    display: inline-block;
+  }
+  .carousel-text {
+    display: inline-block;
   }
 }
 @media (width <= 576px) {
