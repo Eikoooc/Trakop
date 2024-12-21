@@ -141,11 +141,24 @@ body {
   }
 }
 
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+.carousel-text{
+  background-color: #2e2b2b;
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  .text-decoration{
+    font-weight: bold;
+    color: #f7b939;
+    
+  }
 }
+
+// * {
+// 	box-sizing: border-box;
+// 	margin: 0;
+// 	padding: 0;
+// }
 
 html {
 	font-family: system-ui;
@@ -169,7 +182,7 @@ html {
 .container {
 	overflow: hidden;
 	padding: 20px;
-	margin-top: 5em;
+	margin-top: 2em;
 	// background: rgba(0, 0, 0, 0.1);
 }
 .card-carousel {
