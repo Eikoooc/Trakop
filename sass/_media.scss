@@ -19,7 +19,7 @@
     }
 
     .container{
-        display: block;
+        display: inline-block;
     }
 
     .card-carousel{
@@ -28,6 +28,10 @@
 
     .carousel-text{
         display: inline-block;
+    }
+
+    .services{
+        display: none;
     }
 }
 

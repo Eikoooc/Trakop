@@ -154,13 +154,16 @@ body {
     font-size: 1.8rem;
   }
   .container {
-    display: block;
+    display: inline-block;
   }
   .card-carousel {
     display: inline-block;
   }
   .carousel-text {
     display: inline-block;
+  }
+  .services {
+    display: none;
   }
 }
 @media (width <= 576px) {
