@@ -144,32 +144,32 @@ body {
 .services {
 	display: flex;
 	justify-content: space-evenly;
-  text-transform: uppercase;
-  .line{
-    margin-top: 5px;
-    height: 2px;
-    width: 50px;
-    background-color: #f7b939;
-    transition: width 0.3s;
-  }
-  .service-text{
-    display: block;
-  }
+	text-transform: uppercase;
+	.line {
+		margin-top: 5px;
+		height: 2px;
+		width: 50px;
+		background-color: #f7b939;
+		transition: width 0.3s;
+	}
+	.service-text {
+		display: block;
+	}
 	.service {
 		display: flex;
-    flex-direction: column;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		width: 200px;
 		height: 200px;
 		margin: 50px;
-    text-align: center;
+		text-align: center;
 		background-color: #222121;
 	}
 
-  .service:hover .line{
-    width: 80px;
-  }
+	.service:hover .line {
+		width: 80px;
+	}
 
 	.groupOne,
 	.groupTwo,
