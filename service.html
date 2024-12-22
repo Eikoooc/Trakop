@@ -10,7 +10,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=PT+Sans+Caption:wght@400;700&display=swap"
         rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/service.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
 
 <body>
@@ -22,7 +25,7 @@
         <div class="wrapper">
             <nav class="header-nav">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="carousel">Home</a></li>
+                    <li class="nav-item"><a href="#">Home</a></li>
                     <li class="nav-item"><a href="#">Oferta</a></li>
                     <li class="nav-item"><a href="#">Park Maszynowy</a></li>
                     <li class="nav-item"><a href="#">Realizacje</a></li>
@@ -44,8 +47,6 @@
         </div>
     </header>
     <main>
-
-
         <section class="services">
             <div class="groupOne">
                 <div class="service">
@@ -81,101 +82,141 @@
                     <div class="line"></div>
                 </div>
                 <div class="service">
-                    <h3 class="service-text">nie ma</h3>
+                    <h3 class="service-text">własna kopalnia</h3>
                     <div class="line"></div>
                 </div>
                 <div class="service">
-                    <h3 class="service-text">nie ma</h3>
+                    <h3 class="service-text">własna kopalnia</h3>
                     <div class="line"></div>
                 </div>
             </div>
-
-
-        </section>
+        </section> 
 
 
 
-        <div class="carousel-text">
-            <p class="text"><span class="text-decoration">Firma Trakop</span> oferuje profesjonalne usługi budowlane,
-                wykorzystując nowoczesny sprzęt i wysokie standardy pracy. Nasz zespół specjalistów zapewnia terminowość
-                oraz jakość wykonania. Zachęcamy do zapoznania się z naszą ofertą poniżej.</p>
-        </div>
-
-        <div class="container">
-            <div class="card-carousel " id="carousel">
-                <div class="card" id="1">
-                    <h1 class="card-title">Transport</h1>
-                    <p class="card-text">Oferujemy profesjonalny transport kruszyw, żwiru, tłucznia i piasku przy użyciu
-                        wywrotek 4-osiowych oraz naczep typu "patelnia". Dzięki własnej kopalni piasku zapewniamy
-                        najwyższą jakość materiałów, terminową realizację zleceń oraz konkurencyjne ceny.</p>
-
-                </div>
-                <div class="card" id="2">
-                    <h1 class="card-title">Usługi koparka</h1>
-                    <p class="card-text">Świadczymy usługi koparką, obejmujące wykopy ziemne, niwelację terenu, usuwanie
-                        gruzu, a także przygotowanie terenu pod budowę. Dzięki profesjonalnemu sprzętowi oraz
-                        wykwalifikowanej kadrze zapewniamy szybkie i dokładne wykonanie wszelkich prac ziemnych.</p>
-
-                </div>
-                <div class="card" id="3">
-                    <h1 class="card-title">Prace Ziemne</h1>
-                    <p class="card-text">Oferujemy profesjonalny transport kruszyw, żwiru, tłucznia i piasku przy użyciu
-                        wywrotek 4-osiowych oraz naczep typu "patelnia". Dzięki własnej kopalni piasku zapewniamy
-                        najwyższą jakość materiałów, terminową realizację zleceń oraz konkurencyjne ceny.</p>
-
-                </div>
-                <div class="card" id="4">
-                    <h1 class="card-title">Wywóz gruzu</h1>
-                    <p class="card-text">Oferujemy szybki i profesjonalny wywóz gruzu oraz odpadów budowlanych.
-                        Zapewniamy terminowy odbiór, nowoczesny sprzęt i konkurencyjne ceny</p>
-
-                </div>
-                <div class="card" id="5">
-                    <h1 class="card-title">Rozbiórki</h1>
-                    <p class="card-text">Oferujemy kompleksowe usługi rozbiórek budynków i konstrukcji. Zapewniamy
-                        fachowe wykonanie prac, nowoczesny sprzęt oraz pełne bezpieczeństwo na każdym etapie.
-                        Gwarantujemy terminowość, sprawny demontaż oraz konkurencyjne ceny</p>
-
-                </div>
-                <div class="card" id="6">
-                    <h1 class="card-title">Usługi Walcem</h1>
-                    <p class="card-text">Oferujemy usługi walcem drogowym, w tym zagęszczanie nawierzchni, utwardzanie
-                        gruntów oraz przygotowanie podłoża pod inwestycje budowlane. Dzięki nowoczesnemu sprzętowi i
-                        doświadczeniu w branży, zapewniamy wysoką jakość i terminowość realizacji prac</p>
-
-                </div>
-                <div class="card" id="7">
-                    <h1 class="card-title">Odświeżanie</h1>
-                    <p class="card-text">Nasza firma oferuje kompleksowe usługi odświeżania budynków. Wykorzystując
-                        nowoczesny sprzęt, realizujemy zadania związane z poprawą estetyki oraz funkcjonalności
-                        obiektów, gwarantując wysoką jakość i terminowość usług.</p>
-
-                </div>
-                <div class="card" id="8">
-                    <h1 class="card-title">NIE MA</h1>
-                    <p class="card-text">.</p>
-
-                </div>
-                <div class="card" id="9">
-                    <h1 class="card-title">NIE MA</h1>
-                    <p class="card-text"></p>
-
-
-                </div>
-
+        <section class="carousel">
+            <div class="carousel-text">
+                <p class="p-text">
+                    <span class="text-dec">Firma Trakop</span> oferuje wywóz gruzu, transport materiałów oraz usługi rozbiórkowe. Dzięki nowoczesnym maszynom i doświadczonemu zespołowi zapewniamy szybkie, bezpieczne i profesjonalne wykonanie każdej usługi. Działamy sprawnie, dbając o terminowość i zadowolenie naszych klientów.
+                </p>
             </div>
-            <a href="#" class="visuallyhidden card-controller">Carousel controller</a>
-        </div>
-
-
+            <div class="carousel-wrap">
+                <div class="owl-carousel">
+                    <div class="item">
+                        <div class="text">
+                            <h2 class="item-text">Transport</h2>
+                            <div class="line"></div>
+                        </div>
+                        <div class="yellowBGC">
+                            <h2 class="yellow-title">
+                                Transport
+                            </h2>
+                            <p class="yellow-text">Oferujemy profesjonalny transport kruszyw, żwiru, tłucznia i piasku przy użyciu wywrotek 4-osiowych oraz naczep typu "patelnia". Dzięki własnej kopalni piasku zapewniamy najwyższą jakość materiałów, terminową realizację zleceń oraz konkurencyjne ceny..</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h2 class="item-text">Wywóz gruzu</h2>
+                            <div class="line"></div>
+                        </div>
+                        <div class="yellowBGC">
+                            <h2 class="yellow-title">
+                                Wywóz gruzu
+                            </h2>
+                            <p class="yellow-text">Oferujemy szybki i profesjonalny wywóz gruzu oraz odpadów budowlanych. Zapewniamy terminowy odbiór, nowoczesny sprzęt i konkurencyjne ceny..</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h2 class="item-text">Prace Ziemne</h2>
+                            <div class="line"></div>
+                        </div>
+                        <div class="yellowBGC">
+                            <h2 class="yellow-title">
+                                Prace Ziemne
+                            </h2>
+                            <p class="yellow-text">Oferujemy profesjonalne prace ziemne, w tym wykopy, niwelacje terenu i przygotowanie podłoża pod inwestycje. Dysponujemy nowoczesnym sprzętem oraz doświadczoną kadrą, co gwarantuje terminową i solidną realizację zleceń. Zapewniamy wysoką jakość usług i konkurencyjne ceny.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h2 class="item-text">Usługi Koparko-Ładowarką</h2>
+                            <div class="line"></div>
+                        </div>
+                        <div class="yellowBGC">
+                            <h2 class="yellow-title">
+                                Usługi Koparko-Ładowarką
+                            </h2>
+                            <p class="yellow-text">Nasza firma oferuje kompleksowe usługi odświeżania budynków. Wykorzystując nowoczesny sprzęt, realizujemy zadania związane z poprawą estetyki oraz funkcjonalności obiektów, gwarantując wysoką jakość i terminowość usług.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h2 class="item-text">Rozbiórki</h2>
+                            <div class="line"></div>
+                        </div>
+                        <div class="yellowBGC">
+                            <h2 class="yellow-title">
+                                Rozbiórki
+                            </h2>
+                            <p class="yellow-text">Oferujemy kompleksowe usługi rozbiórek budynków i konstrukcji. Zapewniamy fachowe wykonanie prac, nowoczesny sprzęt oraz pełne bezpieczeństwo na każdym etapie. Gwarantujemy terminowość, sprawny demontaż oraz konkurencyjne ceny.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h2 class="item-text">Usługi koparką</h2>
+                            <div class="line"></div>
+                        </div>
+                        <div class="yellowBGC">
+                            <h2 class="yellow-title">
+                                Usługi koparką
+                            </h2>
+                            <p class="yellow-text">Świadczymy usługi koparką, obejmujące wykopy ziemne, niwelację terenu, usuwanie gruzu, a także przygotowanie terenu pod budowę. Dzięki profesjonalnemu sprzętowi oraz wykwalifikowanej kadrze zapewniamy szybkie i dokładne wykonanie wszelkich prac ziemnych..</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h2 class="item-text">Odświeżanie</h2>
+                            <div class="line"></div>
+                        </div>
+                        <div class="yellowBGC">
+                            <h2 class="yellow-title">
+                                Odświeżanie
+                            </h2>
+                            <p class="yellow-text">Nasza firma oferuje kompleksowe usługi odświeżania budynków. Wykorzystując nowoczesny sprzęt, realizujemy zadania związane z poprawą estetyki oraz funkcjonalności obiektów, gwarantując wysoką jakość i terminowość usług.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h2 class="item-text">Własna kopalnia</h2>
+                            <div class="line"></div>
+                        </div>
+                        <div class="yellowBGC">
+                            <h2 class="yellow-title">
+                                Własna kopalnia
+                            </h2>
+                            <p class="yellow-text">Nasza firma oferuje kompleksowe usługi odświeżania budynków. Wykorzystując nowoczesny sprzęt, realizujemy zadania związane z poprawą estetyki oraz funkcjonalności obiektów, gwarantując wysoką jakość i terminowość usług.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="text">
+                            <h2 class="item-text">Usługi walcem</h2>
+                            <div class="line"></div>
+                        </div>
+                        <div class="yellowBGC">
+                            <h2 class="yellow-title">
+                                Własna kopalnia
+                            </h2>
+                            <p class="yellow-text">Oferujemy usługi walcem drogowym, w tym zagęszczanie nawierzchni, utwardzanie gruntów oraz przygotowanie podłoża pod inwestycje budowlane. Dzięki nowoczesnemu sprzętowi i doświadczeniu w branży, zapewniamy wysoką jakość i terminowość realizacji prac</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-
-
-
-
-
-
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 
