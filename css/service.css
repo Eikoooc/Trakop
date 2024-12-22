@@ -16,10 +16,6 @@
     opacity: 1;
   }
 }
-:root {
-  --background-color: #333;
-}
-
 *,
 *::after,
 *::before {
@@ -35,7 +31,7 @@ html {
 body {
   font-family: "PT Sans Caption", sans-serif;
   font-size: 1.6rem;
-  background-color: var(--background-color);
+  background-color: #333;
   color: white;
 }
 
@@ -183,102 +179,156 @@ body {
   flex-direction: column;
 }
 
-.carousel {
+.carousel-text {
   display: none;
-}
-.carousel .carousel-text {
+  background-color: #2e2b2b;
   margin-top: 40px;
-  background-color: #222121;
+  padding: 30px;
   text-align: center;
+  font-size: 18px;
 }
-.carousel .carousel-text .text-dec {
+.carousel-text .text-decoration {
+  font-weight: bold;
   color: #f7b939;
 }
-.carousel .carousel-text .p-text {
-  padding: 10px;
+
+html {
+  font-family: system-ui;
+  background: #3d76d9;
 }
 
-.carousel-wrap {
+.visuallyhidden {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  opacity: 0;
+}
+
+.container {
+  display: none;
+  overflow: hidden;
+  padding: 20px;
+  margin-top: 2em;
+}
+
+.card-carousel {
+  display: none;
+  --card-width: 80%;
+  --card-max-width: 280px;
+  --card-height: 350px;
+  --carousel-min-width: 600px;
+  z-index: 1;
   position: relative;
-  margin: 40px auto;
-  padding: 0 5%;
-  width: 80%;
-  /* fix blank or flashing items on carousel */
-  /* end fix */
+  margin: 0 auto;
+  width: 100%;
+  height: var(--card-height);
+  min-width: var(--carousel-min-width);
+  transition: filter 0.3s ease;
 }
-.carousel-wrap .line {
-  margin-top: 5px;
-  height: 2px;
-  width: 50px;
-  background-color: #f7b939;
-  margin-left: auto;
-  margin-right: auto;
+
+@media screen and (max-width: 640px) {
+  .card-carousel {
+    margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2);
+  }
 }
-.carousel-wrap .yellowBGC {
+.card-carousel.smooth-return {
+  transition: all 0.2s ease;
+}
+
+.card-carousel .card {
+  background: #f7b939;
+  width: var(--card-width);
+  max-width: var(--card-max-width);
+  text-align: center;
+  padding: 1em;
+  min-width: 250px;
+  height: var(--card-height);
+  position: absolute;
+  margin: 0 auto;
+  color: rgba(0, 0, 0, 0.5);
+  transition: inherit;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 1em;
+  filter: brightness(0.9);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  position: absolute;
-  transition: transform 0.8s, opacity 0.8s;
-  width: 100%;
-  height: 100%;
-  background-color: #f7b939;
-  opacity: 0;
-}
-.carousel-wrap .item:hover .yellowBGC {
-  opacity: 1;
-}
-.carousel-wrap .text {
-  transition: opacity 0.8s;
-}
-.carousel-wrap .item:hover .text {
-  opacity: 0;
-}
-.carousel-wrap .yellowBGC h2 {
-  font-size: 2.5rem;
-  color: black;
-  font-weight: bold;
-  transition: 0.8s;
-}
-.carousel-wrap p {
-  font-size: 13px;
-  padding: 20px;
-  color: #333;
-  font-weight: bold;
-}
-.carousel-wrap .owl-carousel .item {
-  position: relative;
-  z-index: 100;
-  -webkit-backface-visibility: hidden;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: #222121;
-  color: white;
-  height: 300px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: transform 0.8s, opacity 0.8s;
-  transform-style: preserve-3d;
-  perspective: 1000px;
-}
-.carousel-wrap .owl-nav > div {
-  margin-top: -26px;
-  position: absolute;
-  top: 50%;
-  color: #cdcbcd;
-}
-.carousel-wrap .owl-nav i {
-  font-size: 52px;
-}
-.carousel-wrap .owl-nav .owl-prev {
-  left: -30px;
-}
-.carousel-wrap .owl-nav .owl-next {
-  right: -30px;
+  justify-content: center;
 }
 
-@media (max-width: 786px) {
+.card .card-title {
+  margin-top: -1em;
+  text-align: center;
+  color: black;
+}
+.card .card-text {
+  margin-top: 20px;
+  color: #333;
+}
+
+.card.highlight {
+  filter: brightness(1);
+}
+
+.card:nth-of-type(1) .image-container {
+  background-image: url("https://static.addtoany.com/images/dracaena-cinnabari.jpg");
+}
+
+.card:nth-of-type(2) .image-container {
+  background-image: url("https://www.w3schools.com/w3css/img_lights.jpg");
+}
+
+.card:nth-of-type(3) .image-container {
+  background-image: url("https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+}
+
+.card:nth-of-type(4) .image-container {
+  background-image: url("https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+}
+
+.card:nth-of-type(5) .image-container {
+  background-image: url("https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg");
+}
+
+.image-container {
+  width: 8em;
+  height: 8em;
+  position: relative;
+  background-size: cover;
+  margin-bottom: 2em;
+  border-radius: 100%;
+  padding: 1em;
+  box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
+}
+
+.image-container::after {
+  content: "";
+  display: block;
+  width: 120%;
+  height: 120%;
+  border: solid 3px rgba(0, 0, 0, 0.1);
+  border-radius: 100%;
+  position: absolute;
+  top: calc(-10% - 3px);
+  left: calc(-10% - 3px);
+}
+
+h2 {
+  padding: 1em;
+  margin-top: 1em;
+  background: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+  border-radius: 0.2em;
+  display: inline-block;
+  transform: translateX(calc((100vw - 100%) / 2));
+}
+
+h2 a {
+  color: #f5b916;
+}
+
+@media (width <= 786px) {
   .header .header-text .title {
     font-size: 6.4rem;
   }
@@ -288,22 +338,20 @@ body {
   .header-nav .nav-list .nav-item {
     font-size: 1.8rem;
   }
-  .carousel {
+  .container {
     display: block;
   }
-}
-@media (max-width: 699px) {
-  .carousel-wrap p {
-    font-size: 11px;
-    padding: 10px;
+  .card-carousel {
+    display: inline-block;
   }
-}
-@media (max-width: 900px) {
+  .carousel-text {
+    display: inline-block;
+  }
   .services {
     display: none;
   }
 }
-@media (max-width: 576px) {
+@media (width <= 576px) {
   .header .header-text .title {
     font-size: 4.7rem;
     padding-bottom: 0.3em;

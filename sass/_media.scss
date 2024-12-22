@@ -1,57 +1,56 @@
-@media (max-width: 786px) {
-    .header {
-        .header-text {
-            .title {
-                font-size: 6.4rem;
-            }
-            .text-under {
-                font-size: 2rem;
-            }
-        }
+@media (width <= 786px) {
+	.header {
+		.header-text {
+			.title {
+				font-size: 6.4rem;
+			}
+			.text-under {
+				font-size: 2rem;
+			}
+		}
 
-        &-nav {
-            .nav-list {
-                .nav-item {
-                    font-size: 1.8rem;
-                }
-            }
-        }
-    }
+		&-nav {
+			.nav-list {
+				.nav-item {
+					font-size: 1.8rem;
+				}
+			}
+		}
+	}
 
-    .carousel{
-        display: block;
-    }
+	.container {
+		display: block;
+	}
+
+	.card-carousel {
+		display: inline-block;
+	}
+
+	.carousel-text {
+		display: inline-block;
+	}
+
+	.services {
+		display: none;
+	}
 }
 
-@media (max-width: 699px) {
-    .carousel-wrap {
-        p {
-            font-size: 11px;
-            padding: 10px;
-        }
-    }
+@media (width <= 576px) {
+	.header {
+		.header-text {
+			.title {
+				font-size: 4.7rem;
+				padding-bottom: 0.3em;
+			}
+			.text-under {
+				font-size: 1.8rem;
+			}
+		}
+
+		&-nav {
+			display: none;
+		}
+	}
 }
 
-@media (max-width: 900px) {
-    .services {
-        display: none;
-    }
-}
 
-@media (max-width: 576px) {
-    .header {
-        .header-text {
-            .title {
-                font-size: 4.7rem;
-                padding-bottom: 0.3em;
-            }
-            .text-under {
-                font-size: 1.8rem;
-            }
-        }
-
-        &-nav {
-            display: none;
-        }
-    }
-}
