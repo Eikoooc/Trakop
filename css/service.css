@@ -146,6 +146,7 @@ body {
 .services {
   display: flex;
   justify-content: space-evenly;
+  margin-top: 20px;
   text-transform: uppercase;
 }
 .services .line {
@@ -165,7 +166,7 @@ body {
   align-items: center;
   width: 200px;
   height: 200px;
-  margin: 50px;
+  margin: 50px 0;
   text-align: center;
   background-color: #222121;
 }
@@ -328,6 +329,22 @@ h2 a {
   color: #f5b916;
 }
 
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+  height: 150px;
+  background-color: #222121;
+  text-align: center;
+}
+.footer div {
+  text-align: center;
+}
+.footer p {
+  margin-top: 15px;
+}
+
 @media (width <= 786px) {
   .header .header-text .title {
     font-size: 6.4rem;
@@ -349,6 +366,14 @@ h2 a {
   }
   .services {
     display: none;
+  }
+  .footer {
+    flex-direction: column-reverse;
+    height: 400px;
+    font-size: 20px;
+  }
+  .footer .box1 {
+    order: 1;
   }
 }
 @media (width <= 576px) {
