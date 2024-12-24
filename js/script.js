@@ -1,5 +1,3 @@
-
-
 function toggleListItemName() {
   const listItem = document.querySelectorAll("li")[2];
 
@@ -18,8 +16,38 @@ function toggleListItemName() {
   window.addEventListener("resize", updateName);
 }
 
-window.addEventListener("DOMContentLoaded", toggleListItemName);
+window.addEventListener("DOMContentLoaded", () => {
+  toggleListItemName();
+  toggleCardDec();
+});
 
+function toggleCardDec() {
+  const services = document.querySelectorAll('.service');
+  const cardDecs = document.querySelectorAll('.card-dec');
+  let isCardDecOpen = false;
+
+  services.forEach(service => {
+    const serviceClass = service.classList[1].replace('-ser', '');
+    const cardDec = document.querySelector(`.card-dec.${serviceClass}`);
+
+    if (!service || !cardDec) return;
+
+    service.addEventListener('click', () => {
+      if (!isCardDecOpen) {
+        cardDec.style.display = 'flex';
+        isCardDecOpen = true;
+      }
+    });
+
+    const backBtn = cardDec.querySelector('.back');
+    if (backBtn) {
+      backBtn.addEventListener('click', () => {
+        cardDec.style.display = 'none';
+        isCardDecOpen = false;
+      });
+    }
+  });
+}
 
 const cardsContainer = document.querySelector(".card-carousel");
 const cardsController = document.querySelector(".card-carousel + .card-controller")
@@ -164,7 +192,6 @@ class CardCarousel extends DraggingEvent {
       })
     }
   }
-  
   
   controller(e) {
     const temp = {...this.xScale};
