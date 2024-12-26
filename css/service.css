@@ -165,7 +165,7 @@ body {
   align-items: center;
   width: 200px;
   height: 200px;
-  margin: 50px;
+  margin: 50px 0;
   text-align: center;
   background-color: #222121;
 }
@@ -341,10 +341,7 @@ h2 a {
   .container {
     display: block;
   }
-  .card-carousel {
-    display: inline-block;
-  }
-  .carousel-text {
+  .card-carousel, .carousel-text {
     display: inline-block;
   }
   .services {
@@ -352,6 +349,9 @@ h2 a {
   }
 }
 @media (width <= 576px) {
+  .header .header-text {
+    top: 65%;
+  }
   .header .header-text .title {
     font-size: 4.7rem;
     padding-bottom: 0.3em;
@@ -361,5 +361,45 @@ h2 a {
   }
   .header-nav {
     display: none;
+  }
+  .header .arrow {
+    bottom: 4em;
+    height: 6em;
+  }
+  .header .arrow img {
+    width: 7em;
+    height: 7em;
+  }
+}
+@media (width >= 576px) {
+  .about-us .section-title {
+    font-size: 2.7rem;
+    padding: 1.5em 2em;
+  }
+  .about-us .section-title::before {
+    top: 1em;
+    left: 1em;
+  }
+  .about-us__text {
+    font-size: 2rem;
+  }
+}
+@media (width >= 992px) {
+  .about-us .section-title {
+    font-size: 3.2rem;
+    padding: 1.5em 2em;
+  }
+  .about-us .section-title::before {
+    top: 1.2em;
+    left: 1em;
+  }
+  .about-us__text {
+    padding-right: 1em;
+    max-width: 60%;
+    font-size: 2rem;
+  }
+  .about-us .wrapper {
+    display: flex;
+    justify-content: end;
   }
 }/*# sourceMappingURL=service.css.map */

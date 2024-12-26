@@ -22,11 +22,7 @@
 		display: block;
 	}
 
-	.card-carousel {
-		display: inline-block;
-	}
-
-	.carousel-text {
+	.card-carousel, .carousel-text {
 		display: inline-block;
 	}
 
@@ -38,6 +34,7 @@
 @media (width <= 576px) {
 	.header {
 		.header-text {
+			top: 65%;
 			.title {
 				font-size: 4.7rem;
 				padding-bottom: 0.3em;
@@ -50,7 +47,61 @@
 		&-nav {
 			display: none;
 		}
+
+		.arrow{
+			bottom: 4em;
+			height: 6em;
+
+			img{
+				width: 7em;
+				height: 7em;
+			}
+		}
 	}
 }
 
+// ==================== Width > x ====================
 
+
+@media (width >= 576px){
+	.about-us {
+		.section-title{
+			font-size: 2.7rem;
+			padding: 1.5em 2em;
+			
+			&::before{
+				top: 1em;
+				left: 1em;
+			}
+		}
+		
+		&__text{
+			font-size: 2rem;
+		}
+	}
+}
+
+@media (width >= 992px) {
+	.about-us {
+		.section-title{
+			font-size: 3.2rem;
+			padding: 1.5em 2em;
+
+			&::before{
+				top: 1.2em;
+				left: 1em;
+			}
+		}
+
+		&__text{
+			padding-right: 1em;
+			max-width: 60%;
+			font-size: 2rem;
+		}
+
+		.wrapper{
+			display: flex;
+			justify-content: end;
+		}
+	}
+}

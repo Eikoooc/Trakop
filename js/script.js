@@ -1,5 +1,3 @@
-
-
 function toggleListItemName() {
   const listItem = document.querySelectorAll("li")[2];
 
