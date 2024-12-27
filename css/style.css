@@ -230,7 +230,22 @@ body {
   color: black;
 }
 
+@media (width <= 992px) {
+  .outer-image-box {
+    top: 80em;
+    height: 28em;
+    width: 60%;
+  }
+  .about-us {
+    height: 28em;
+  }
+}
 @media (width <= 786px) {
+  .outer-image-box {
+    top: 82em;
+    height: 25em;
+    width: 60%;
+  }
   .header .header-text .title {
     font-size: 6.4rem;
   }
@@ -251,6 +266,11 @@ body {
   }
 }
 @media (width <= 576px) {
+  .outer-image-box {
+    top: 80em;
+    height: 20em;
+    width: 60%;
+  }
   .header .header-text {
     top: 65%;
   }
@@ -271,6 +291,11 @@ body {
   .header .arrow img {
     width: 7em;
     height: 7em;
+  }
+}
+@media (width <= 440px) {
+  .outer-image-box {
+    display: none;
   }
 }
 @media (width >= 576px) {
