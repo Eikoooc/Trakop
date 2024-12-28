@@ -83,6 +83,20 @@
 			}
 		}
 	}
+	.section-ofert{
+		.wrapper{
+			.whole-box-ofert{
+				.box-ofert{
+					.first{
+						display: none;
+					}
+					// .ofert{
+					// 	margin: 5px;
+					// }
+				}
+			}
+		}
+	}
 }
 
 @media (width <= 440px){
@@ -110,6 +124,7 @@
 			font-size: 2rem;
 		}
 	}
+
 }
 
 @media (width >= 992px) {
