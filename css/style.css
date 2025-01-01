@@ -383,6 +383,14 @@ body {
   .header-nav .nav-list .nav-item {
     font-size: 1.8rem;
   }
+  .footer {
+    height: 400px;
+    flex-direction: column-reverse;
+    font-size: 20px;
+  }
+  .footer .box1 {
+    order: 1;
+  }
   .container {
     display: block;
   }
