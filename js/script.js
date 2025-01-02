@@ -57,15 +57,16 @@ function setupMachineryItems() {
     item.addEventListener("click", () => {
       const isExpanded = item.classList.contains("expanded");
       const content = item.querySelector(".machinery__content");
+      const triangle = item.querySelector(".machinery__triangle");
 
       if (isExpanded) {
         item.classList.remove("expanded");
-        setTimeout(() => {
-          content.style.display = "none";
-        }, 500); // Match the transition duration
+        content.style.display = "none";
+        triangle.classList.remove("machinery__triangle--active");
       } else {
         item.classList.add("expanded");
         content.style.display = "flex";
+        triangle.classList.add("machinery__triangle--active");
       }
     });
   });
