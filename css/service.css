@@ -418,7 +418,8 @@ h2 a {
   .container {
     display: block;
   }
-  .card-carousel, .carousel-text {
+  .card-carousel,
+  .carousel-text {
     display: inline-block;
   }
   .services {
@@ -427,9 +428,7 @@ h2 a {
 }
 @media (width <= 576px) {
   .outer-image-box {
-    top: 80em;
-    height: 20em;
-    width: 60%;
+    display: none;
   }
   .header .header-text {
     top: 65%;
@@ -455,18 +454,29 @@ h2 a {
   .section-ofert .wrapper .whole-box-ofert .box-ofert .first {
     display: none;
   }
+  .about-us {
+    height: 22em;
+  }
 }
 @media (width <= 440px) {
-  .outer-image-box {
-    display: none;
+  .about-us {
+    height: 27em;
   }
 }
 @media (width >= 576px) {
-  .about-us .section-title {
+  .machinery__item {
+    width: 80%;
+    height: 6em;
+    transform: skewY(0);
+  }
+  .machinery__title, .machinery__icon {
+    transform: skewY(0);
+  }
+  .section-title {
     font-size: 2.7rem;
     padding: 1.5em 2em;
   }
-  .about-us .section-title::before {
+  .section-title::before {
     top: 1em;
     left: 1em;
   }
@@ -475,13 +485,13 @@ h2 a {
   }
 }
 @media (width >= 992px) {
-  .about-us .section-title {
+  .section-title {
     font-size: 3.2rem;
-    padding: 1.5em 2em;
+    padding: 1.5em 5em;
   }
-  .about-us .section-title::before {
+  .section-title::before {
     top: 1.2em;
-    left: 1em;
+    left: 4em;
   }
   .about-us__text {
     padding-right: 1em;
