@@ -20,6 +20,7 @@ window.addEventListener("DOMContentLoaded", () => {
   toggleListItemName();
   toggleCardDec();
   setupMachineryItems();
+  initializeCarousel();
 });
 
 function toggleCardDec() {
@@ -57,16 +58,42 @@ function setupMachineryItems() {
     item.addEventListener("click", () => {
       const isExpanded = item.classList.contains("expanded");
       const content = item.querySelector(".machinery__content");
+      const triangle = item.querySelector(".machinery__triangle");
 
       if (isExpanded) {
         item.classList.remove("expanded");
-        setTimeout(() => {
-          content.style.display = "none";
-        }, 500); // Match the transition duration
+        content.style.display = "none";
+        triangle.classList.remove("machinery__triangle--active");
       } else {
         item.classList.add("expanded");
         content.style.display = "flex";
+        triangle.classList.add("machinery__triangle--active");
       }
+    });
+  });
+}
+
+function initializeCarousel() {
+  $(document).ready(function(){
+    $("#customers-testimonials").owlCarousel({
+        items: 3,
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 1800, // Changed from 3000 to 1500
+        autoplayHoverPause: true,
+        nav: false, // Disable navigation
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
+        }
     });
   });
 }
