@@ -84,20 +84,25 @@
 }
 
 @media (width <= 576px) {
-  .owl-prev,
-  .owl-next {
-    padding: 6px 12px;
-    font-size: 14px;
-  }
-  .owl-prev {
-    left: -20px;
-  }
-  .owl-next {
-    right: -20px;
-  }
-  .outer-image-box {
-    display: none;
-  }
+	.realisations{
+		.section-title{
+			margin-left: 30px;
+		}
+	}
+	.owl-prev,
+	.owl-next {
+		padding: 6px 12px;
+		font-size: 14px;
+	}
+	.owl-prev {
+		left: -20px;
+	}
+	.owl-next {
+		right: -20px;
+	}
+	.outer-image-box {
+		display: none;
+	}
 
   .header {
     .header-text {
