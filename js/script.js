@@ -1,27 +1,112 @@
-function toggleListItemName() {
-  const listItem = document.querySelectorAll("li")[2];
+function smoothScrollToSection() {
+  const navHeight = document.querySelector('.nav').offsetHeight;
+  const links = document.querySelectorAll('a[href^="#"], a[href*="index.html#"]');
 
-  if (!listItem) return;
+  links.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      const href = this.getAttribute('href');
+      const targetId = href.includes('#') ? href.split('#')[1] : '';
+      const targetElement = document.getElementById(targetId);
 
-  const updateName = () => {
-    if (window.innerWidth <= 786) {
-      listItem.innerHTML = '<a href="#">Maszyny</a>';
-    } else {
-      listItem.innerHTML = '<a href="#">Park Maszynowy</a>';
+      if (targetElement) {
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navHeight;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      } else {
+        window.location.href = href;
+      }
+    });
+  });
+}
+
+function scrollToHash() {
+  const hash = window.location.hash;
+  if (hash) {
+    const targetElement = document.querySelector(hash);
+    if (targetElement) {
+      const navHeight = document.querySelector('.nav').offsetHeight;
+      const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navHeight;
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
     }
-  };
+  }
+}
 
-  updateName();
+const nav = document.querySelector(".nav");
+function handleScrollNav() {
+  if (window.scrollY > 500 && window.innerWidth > 576) {
+    nav.style.top = "0";
+  } else {
+    nav.style.top = "-100%";
+  }
 
-  window.addEventListener("resize", updateName);
+  if (window.innerWidth <= 576) {
+    nav.style.top = "0";
+  }
+
+  window.addEventListener("resize", handleScrollNav);
+  window.addEventListener("scroll", handleScrollNav);
+}
+
+const listItem = document.querySelectorAll(".nav-item")[2];
+function toggleItemName() {
+  if (window.innerWidth <= 824) {
+    listItem.innerHTML = '<a href="#">Maszyny</a>';
+  } else {
+    listItem.innerHTML = '<a href="#">Park Maszynowy</a>';
+  }
+
+  window.addEventListener("resize", toggleItemName);
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  toggleListItemName();
+  toggleItemName();
   toggleCardDec();
   setupMachineryItems();
-  initializeCarousel();
+  toggleMenuButton();
+  handleScrollNav();
+  smoothScrollToSection();
+  scrollToHash(); // Scroll to hash on page load
 });
+
+const menuButton = document.getElementById("BurgerBtn");
+
+function toggleMenuButton() {
+  let isMenuOpened = false;
+
+  function toggleMenu() {
+    isMenuOpened = !isMenuOpened;
+    if (isMenuOpened) { 
+      menuButton.classList.add("is-opened");
+      nav.classList.add("opened");
+    } else {
+      menuButton.classList.remove("is-opened");
+      nav.classList.remove("opened");
+    }
+  }
+
+
+  const navItems = document.querySelectorAll(".nav__item");
+  function closeNavigation() {
+    navItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        nav.classList.remove("opened");
+        menuButton.classList.remove("is-opened");
+        isMenuOpened = false;
+      });
+    });
+  }
+
+  closeNavigation();
+  menuButton.addEventListener("click", toggleMenu);
+}
 
 function toggleCardDec() {
   const services = document.querySelectorAll(".service");
@@ -69,31 +154,6 @@ function setupMachineryItems() {
         content.style.display = "flex";
         triangle.classList.add("machinery__triangle--active");
       }
-    });
-  });
-}
-
-function initializeCarousel() {
-  $(document).ready(function(){
-    $("#customers-testimonials").owlCarousel({
-        items: 3,
-        loop: true,
-        margin: 10,
-        autoplay: true,
-        autoplayTimeout: 1800, // Changed from 3000 to 1500
-        autoplayHoverPause: true,
-        nav: false, // Disable navigation
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 2
-            },
-            1000: {
-                items: 3
-            }
-        }
     });
   });
 }
@@ -425,6 +485,3 @@ class CardCarousel extends DraggingEvent {
 }
 
 const carousel = new CardCarousel(cardsContainer);
-
-
-

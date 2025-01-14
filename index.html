@@ -25,6 +25,32 @@
 </head>
 
 <body>
+    <nav class="nav">
+        <div class="container">
+
+            <div class="nav__logo">
+                <a href="#">
+                    <img src="./img/Logo/Trakop-logo-white.svg" alt="Logo Trakop-Grzegorz Wiśniewski">
+                </a>
+            </div>
+            <div class="nav__phone">
+                <div class="nav__phone-icon">
+                    <img src="./img/Icons/phone.png" alt="">
+                </div>
+                <p> 123 456 789</p>
+            </div>
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#offers">Oferta</a></li>
+                <li class="nav__item"><a href="#machinery">Park Maszynowy</a></li>
+                <li class="nav__item"><a href="#realisations">Realizacje</a></li>
+                <li class="nav__item"><a href="#footer">Kontakt</a></li>
+            </ul>
+            <button id="BurgerBtn" type="button" class="nav__btn" aria-labelledby="BurgerBtnLabel">
+                <span class="nav__btn__line"></span>
+            </button>
+        </div>
+    </nav>
+
     <header class="header">
         <div class="logo">
             <img src="./img/Logo/Trakop-logo-black.svg" alt="Logo Trakop-Grzegorz Wiśniewski">
@@ -33,10 +59,10 @@
             <nav class="header-nav">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#">Home</a></li>
-                    <li class="nav-item"><a href="#">Oferta</a></li>
-                    <li class="nav-item"><a href="#">Park Maszynowy</a></li>
-                    <li class="nav-item"><a href="#">Realizacje</a></li>
-                    <li class="nav-item"><a href="#">Kontakt</a></li>
+                    <li class="nav-item"><a href="#offers">Oferta</a></li>
+                    <li class="nav-item"><a href="#machinery">Park Maszynowy</a></li>
+                    <li class="nav-item"><a href="#realisations">Realizacje</a></li>
+                    <li class="nav-item"><a href="#footer">Kontakt</a></li>
                 </ul>
             </nav>
 
@@ -71,7 +97,7 @@
             </div>
         </div>
 
-        <section class="section-ofert">
+        <section class="section-ofert" id="offers">
             <h2 class="section-title">Oferujemy</h2>
             <div class="wrapper">
                 <div class="whole-box-ofert">
@@ -89,7 +115,7 @@
                             <p class="ofert-title">Prace ziemne</p>
                         </div>
                     </div>
-                    <button class="ofert-button">Zobacz wszystko</button>
+                    <button class="ofert-button" onclick="location.href='service.html'">Zobacz wszystko</button>
 
                 </div>
             </div>
@@ -244,9 +270,14 @@
                     </div>
 
                     <div class="machinery__item">
-                        <h3 class="machinery__title">Ciężarówki</h3>
-                        <div class="machinery__icon machinery__icon--small"><img src="./img/Icons/semi.png"
-                                alt="ciężarówki"></div>
+                        <div class="machinery__inner-wrapper">
+
+                            <h3 class="machinery__title">Ciężarówki</h3>
+                            <div class="machinery__icon machinery__icon--small"><img src="./img/Icons/semi.png"
+                                    alt="ciężarówki">
+                            </div>
+                            <div class="machinery__triangle"></div>
+                        </div>
                         <div class="machinery__content">
                             <div class="machinery__content-item">
                                 <img src="./img/digger.jpg" alt="">
@@ -265,16 +296,16 @@
 
 
         <!-- TESTIMONIALS -->
-        <section class="realisations">
+        <section class="realisations" id="realisations">
             <h2 class="section-title">Zobacz nasze realizacje</h2>
             <div class="container">
 
                 <div class="row ">
                     <div class="col-sm-12">
                         <div id="customers-testimonials" class="owl-carousel owl-theme">
-                            
-                            
-                            
+
+
+
                             <div class="item">
                                 <div class="shadow-effect">
                                     <div class="img"></div>
@@ -340,7 +371,7 @@
     </main>
 
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <p class="copyright">Copyright &copy; 2024 |Trakop Grzegorz Wiśniewski</p>
 
         <div class="box1">
