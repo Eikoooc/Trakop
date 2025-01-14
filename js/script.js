@@ -182,7 +182,7 @@ function initializeCarousel() {
     });
   });
 }
- ee91f31495607c4a0000e4d169dc925485bec03b
+
 const cardsContainer = document.querySelector(".card-carousel");
 const cardsController = document.querySelector(
   ".card-carousel + .card-controller"
