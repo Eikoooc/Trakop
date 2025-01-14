@@ -122,6 +122,8 @@ ul {
 }
 
 .nav {
+  display: flex;
+  justify-content: center;
   position: fixed;
   top: -100%;
   padding: 0 2em;
@@ -131,7 +133,7 @@ ul {
   transition: top 0.3s ease-in-out, height 0.3s;
   z-index: 10000;
 }
-.nav .container {
+.nav__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -243,7 +245,7 @@ ul {
   right: 2em;
   top: 2em;
 }
-.nav.opened .container {
+.nav.opened .nav__container {
   justify-content: center;
 }
 

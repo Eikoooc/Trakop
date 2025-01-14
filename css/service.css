@@ -42,6 +42,8 @@ body {
 }
 
 .nav {
+  display: flex;
+  justify-content: center;
   position: fixed;
   top: -100%;
   padding: 0 2em;
@@ -51,7 +53,7 @@ body {
   transition: top 0.3s ease-in-out, height 0.3s;
   z-index: 10000;
 }
-.nav .container-two {
+.nav__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -164,7 +166,7 @@ body {
   right: 2em;
   top: 2em;
 }
-.nav.opened .container-two {
+.nav.opened .nav__container {
   justify-content: center;
 }
 

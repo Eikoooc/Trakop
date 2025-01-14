@@ -26,6 +26,8 @@ body {
 }
 
 .nav {
+  display: flex;
+  justify-content: center;
   position: fixed;
   top: -100%;
   padding: 0 2em;
@@ -36,7 +38,7 @@ body {
 
   z-index: 10000;
 
-  .container-two {
+  &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -170,7 +172,7 @@ body {
       top: 2em;
     }
 
-    .container-two {
+    .nav__container {
       justify-content: center;
     }
     height: 100vh;
