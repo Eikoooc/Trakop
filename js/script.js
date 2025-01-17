@@ -73,8 +73,13 @@ window.addEventListener("DOMContentLoaded", () => {
   toggleMenuButton();
   handleScrollNav();
   smoothScrollToSection();
+<<<<<<< HEAD
   scrollToHash();
   initializeCarousel();
+=======
+  scrollToHash(); // Scroll to hash on page load
+  initializeCarousel(); // Initialize the carousel
+>>>>>>> 4f792e84464762b5879b05c3260da2954b8ec13a
 });
 
 const menuButton = document.getElementById("BurgerBtn");
@@ -155,6 +160,31 @@ function setupMachineryItems() {
         content.style.display = "flex";
         triangle.classList.add("machinery__triangle--active");
       }
+    });
+  });
+}
+
+
+function initializeCarousel() {
+  $(document).ready(function(){
+    $("#customers-testimonials").owlCarousel({
+      items: 3,
+      loop: true,
+      margin: 10,
+      autoplay: true,
+      autoplayTimeout: 2000,
+      autoplayHoverPause: true,
+      responsive: {
+          0: {
+              items: 1
+          },
+          758: {
+              items: 2
+          },
+          1000: {
+              items: 3
+          }
+        }
     });
   });
 }
