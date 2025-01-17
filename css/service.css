@@ -790,4 +790,14 @@ h2 a {
   .nav__list a {
     font-size: 2.5rem;
   }
+}
+@media (width <= 786px) {
+  .footer {
+    height: 400px;
+    font-size: 20px;
+    flex-direction: column-reverse;
+  }
+  .footer .box1 {
+    order: 1;
+  }
 }/*# sourceMappingURL=service.css.map */
