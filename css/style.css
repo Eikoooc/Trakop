@@ -711,7 +711,7 @@ ul {
   text-align: center;
   position: relative;
   padding: 10em 2em 2em 2em;
-  top: -13em;
+  top: -14em;
 }
 .footer div {
   text-align: center;
@@ -731,6 +731,9 @@ ul {
   .section-ofert .wrapper .whole-box-ofert .box-ofert .ofert {
     width: 130px;
     height: 130px;
+  }
+  .section-ofert .wrapper .whole-box-ofert .box-ofert .ofert .ofert-title {
+    top: 8em;
   }
   .section-ofert .ofert-button {
     bottom: -8em;
