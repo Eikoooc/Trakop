@@ -508,7 +508,41 @@ h2 a {
   margin-top: 15px;
 }
 
+@media (width <= 1300px) {
+  .section-ofert .wrapper .whole-box-ofert .box-ofert {
+    justify-content: center;
+  }
+  .section-ofert .wrapper .whole-box-ofert .box-ofert .ofert {
+    margin-right: 30px;
+  }
+  .section-ofert .wrapper .whole-box-ofert .box-ofert .first {
+    display: none;
+  }
+  .section-ofert .wrapper .whole-box-ofert .ofert-button {
+    right: 53%;
+  }
+}
+@media (width <= 1130px) {
+  .section-ofert .wrapper .whole-box-ofert .box-ofert {
+    margin-right: -8em;
+  }
+  .section-ofert .wrapper .whole-box-ofert .box-ofert .first {
+    display: none;
+  }
+  .section-ofert .wrapper .whole-box-ofert .ofert-button {
+    right: 45%;
+  }
+}
 @media (width <= 992px) {
+  .section-ofert .wrapper .whole-box-ofert .box-ofert {
+    margin-right: -19em;
+  }
+  .section-ofert .wrapper .whole-box-ofert .box-ofert .first {
+    display: none;
+  }
+  .section-ofert .wrapper .whole-box-ofert .ofert-button {
+    right: 32%;
+  }
   .nav .container {
     padding: 0;
   }
