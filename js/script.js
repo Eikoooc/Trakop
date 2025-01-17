@@ -73,13 +73,9 @@ window.addEventListener("DOMContentLoaded", () => {
   toggleMenuButton();
   handleScrollNav();
   smoothScrollToSection();
-<<<<<<< HEAD
   scrollToHash();
   initializeCarousel();
-=======
-  scrollToHash(); // Scroll to hash on page load
-  initializeCarousel(); // Initialize the carousel
->>>>>>> 4f792e84464762b5879b05c3260da2954b8ec13a
+
 });
 
 const menuButton = document.getElementById("BurgerBtn");
