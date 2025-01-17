@@ -27,6 +27,7 @@ ul {
   margin: 0;
 }
 
+
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
@@ -47,7 +48,7 @@ ul {
   justify-content: center;
   align-items: center;
   width: 50%;
-  height: 37em;
+  height: 57em;
   background: #f7b939;
 
   .mixed-background {
@@ -118,8 +119,8 @@ ul {
   height: 6.3em;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.627);
-  transition: top 0.3s ease-in-out, height .3s;
-  
+  transition: top 0.3s ease-in-out, height 0.3s;
+
   z-index: 10000;
 
   &__container {
@@ -227,7 +228,7 @@ ul {
   }
 
   &.opened {
-    background-color: #403F3E;
+    background-color: #403f3e;
     .nav__logo,
     .nav__phone {
       display: none;
@@ -249,13 +250,13 @@ ul {
       }
     }
 
-    .nav__btn{
+    .nav__btn {
       position: absolute;
       right: 2em;
       top: 2em;
     }
-    
-    .nav__container{
+
+    .nav__container {
       justify-content: center;
     }
     height: 100vh;
@@ -403,9 +404,9 @@ ul {
 
 .section-ofert {
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 91%);
+  padding: 2em 0 12em 0;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%);
   margin-top: -3em;
-  height: 600px;
   width: 100%;
   background-color: #222121;
   z-index: 9;
@@ -430,13 +431,17 @@ ul {
     justify-content: right;
 
     .whole-box-ofert {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       position: relative;
       height: 300px;
-      width: 700px;
-      // background-color: royalblue;
+      padding-right: 5%;
       .box-ofert {
         display: flex;
         justify-content: space-evenly;
+        gap: 2em;
 
         .ofert {
           // position: relative;
@@ -482,9 +487,8 @@ ul {
   }
   .ofert-button {
     font-family: "PT Sans";
-    position: absolute;
-    right: 50%;
-    bottom: -30px;
+    position: relative;
+    bottom: -5em;
     width: 200px;
     height: 60px;
     font-size: 18px;
@@ -496,7 +500,6 @@ ul {
     box-shadow: 0 0 15px #eb5f33;
     color: #fff;
     background-color: #eb5f33;
-    transform: translateX(50%);
     cursor: pointer;
     transition: all 0.3s ease;
 
@@ -541,7 +544,7 @@ ul {
 
 .machinery {
   position: relative;
-  top: -4em;
+  top: -8.1em;
   padding: 4em 2em 10em 2em;
   --p: 7em;
   aspect-ratio: 1%;
@@ -693,7 +696,7 @@ ul {
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   background-color: #f7b939;
-  top: -11em;
+  top: -16em;
   // padding-top: 40px; // Adjusted padding to move the title higher
 
   // background-color: #f33f02;
@@ -767,14 +770,12 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: relative;
-  bottom: 10em;
   font-size: 18px;
-  // width: 100%;
-  // margin-top: 20px;
-  height: 200px;
   background-color: #222121;
   text-align: center;
+  position: relative;
+  padding: 10em 2em 2em 2em;
+  top: -13em;
 
   div {
     text-align: center;
@@ -782,6 +783,14 @@ ul {
 
   p {
     margin-top: 15px;
+  }
+  
+  .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 3em;
   }
 }
 

@@ -510,17 +510,40 @@ h2 a {
   margin-top: 15px;
 }
 
+@media (width <= 1300px) {
+  .section-ofert .wrapper .whole-box-ofert .box-ofert .ofert {
+    width: 130px;
+    height: 130px;
+  }
+  .section-ofert .ofert-button {
+    bottom: -8em;
+  }
+}
 @media (width <= 992px) {
   .nav .container {
     padding: 0;
   }
   .outer-image-box {
     top: 80em;
-    height: 28em;
+    height: 38em;
     width: 60%;
   }
   .about-us {
     height: 28em;
+  }
+  .section-ofert .section-title {
+    font-size: 1.8em;
+  }
+  .section-ofert .wrapper .whole-box-ofert .box-ofert .first {
+    display: none;
+  }
+}
+@media (width <= 867px) {
+  .section-ofert .wrapper .whole-box-ofert {
+    padding-right: 6%;
+  }
+  .section-ofert .wrapper .whole-box-ofert .box-ofert .second {
+    display: none;
   }
 }
 @media (width <= 786px) {
@@ -540,7 +563,7 @@ h2 a {
   }
   .outer-image-box {
     top: 82em;
-    height: 25em;
+    height: 32em;
     width: 60%;
   }
   .header .header-text .title {
@@ -551,14 +574,6 @@ h2 a {
   }
   .header-nav .nav-list .nav-item {
     font-size: 1.8rem;
-  }
-  .footer {
-    height: 400px;
-    flex-direction: column-reverse;
-    font-size: 20px;
-  }
-  .footer .box1 {
-    order: 1;
   }
   .container {
     display: block;
@@ -599,7 +614,8 @@ h2 a {
   .header .header-text .text-under {
     font-size: 1.8rem;
   }
-  .header-nav, .header .logo {
+  .header-nav,
+  .header .logo {
     display: none;
   }
   .header .arrow {
@@ -610,16 +626,38 @@ h2 a {
     width: 7em;
     height: 7em;
   }
-  .section-ofert .wrapper .whole-box-ofert .box-ofert .first {
-    display: none;
-  }
   .about-us {
     height: 22em;
+  }
+  .section-ofert {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 91%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 91%);
+  }
+  .section-ofert .wrapper {
+    justify-content: center;
+  }
+  .section-ofert .wrapper .whole-box-ofert {
+    padding-right: 0;
+  }
+  .section-ofert .wrapper .whole-box-ofert .box-ofert .second {
+    display: flex;
+  }
+  .machinery {
+    top: -5em;
+    --p: 3em;
+  }
+  .realisations {
+    top: -12em;
   }
 }
 @media (width <= 440px) {
   .about-us {
     height: 29em;
+  }
+}
+@media (width >= 577px) {
+  .about-us__text {
+    font-size: 2rem;
   }
 }
 @media (width >= 576px) {
@@ -690,9 +728,6 @@ h2 a {
     top: 1em;
     left: 1em;
   }
-  .about-us__text {
-    font-size: 2rem;
-  }
 }
 @media (width >= 786px) {
   .machinery__content-item {
@@ -701,6 +736,10 @@ h2 a {
   }
 }
 @media (width >= 992px) {
+  .footer .box {
+    flex-direction: row;
+    gap: 5em;
+  }
   .machinery__content-item {
     width: 20em;
     height: 20em;
@@ -724,6 +763,10 @@ h2 a {
   }
 }
 @media (width >= 1150px) {
+  .footer .box {
+    gap: 10em;
+    max-width: 1440px;
+  }
   .nav__btn {
     display: none;
   }
