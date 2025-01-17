@@ -159,6 +159,7 @@ function setupMachineryItems() {
   });
 }
 
+
 function initializeCarousel() {
   $(document).ready(function(){
     $("#customers-testimonials").owlCarousel({
@@ -507,6 +508,31 @@ class CardCarousel extends DraggingEvent {
       });
     }
   }
+}
+
+function initializeCarousel() {
+  $(document).ready(function(){
+    $("#customers-testimonials").owlCarousel({
+        items: 3,
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 1800, // Changed from 3000 to 1500
+        autoplayHoverPause: true,
+        nav: false, // Disable navigation
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
+  });
 }
 
 const carousel = new CardCarousel(cardsContainer);
