@@ -732,6 +732,9 @@ ul {
     width: 130px;
     height: 130px;
   }
+  .section-ofert .wrapper .whole-box-ofert .box-ofert .ofert .ofert-title {
+    top: 8em;
+  }
   .section-ofert .ofert-button {
     bottom: -8em;
   }

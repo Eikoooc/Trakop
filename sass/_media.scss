@@ -6,6 +6,10 @@
           .ofert {
             width: 130px;
             height: 130px;
+
+            .ofert-title{
+              top: 8em;
+            }
           }
         }
       }
@@ -69,6 +73,15 @@
 }
 
 @media (width <= 786px) {
+  // .footer{
+  //   height: 400px;
+  //   font-size: 20px;
+  //   flex-direction: column-reverse;
+
+  //   .box1{
+  //     order: 1;
+  //   }
+  // }
   .nav {
     &__phone {
       left: 55%;
