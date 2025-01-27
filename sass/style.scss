@@ -553,9 +553,9 @@ p{
   position: relative;
   top: -8.1em;
   padding: 4em 2em 10em 2em;
-  --p: 7em;
+  --p: 0em;
   aspect-ratio: 1%;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - var(--p)));
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 calc(100% - var(--p)));
   background: #403f3e;
   z-index: 8;
 
@@ -844,7 +844,7 @@ p{
   text-align: center;
   position: relative;
   padding: 10em 2em 2em 2em;
-  top: -14em;
+  top: -15em;
 
   div {
     text-align: center;
@@ -852,6 +852,10 @@ p{
 
   p {
     margin-top: 15px;
+
+    &:first-child{
+      margin-top: 0;
+    }
   }
   
   .box{
