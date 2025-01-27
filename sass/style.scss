@@ -27,6 +27,9 @@ ul {
   margin: 0;
 }
 
+p{
+  margin-bottom: 0;
+}
 
 .wrapper {
   max-width: 1440px;
@@ -542,6 +545,10 @@ ul {
 
 // ==================== MACHINERY ====================
 
+.scale-down{
+  object-fit: scale-down !important;
+}
+
 .machinery {
   position: relative;
   top: -8.1em;
@@ -642,19 +649,61 @@ ul {
     width: 100%;
 
     &-item {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       margin-bottom: 1.5em;
       width: 80%;
       height: 10em;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
 
       img {
+        position: relative;
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 8px;
+        z-index: 1;
+        
       }
+
+      &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.15);
+        z-index: 3;
+      }
+      
 
       &:last-child {
         margin-bottom: 0.5em;
+      }
+
+      &:hover .machinery__content-title{
+        opacity: 1;
+      }
+    }
+
+    &-title{
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 20%;
+      background-color: rgba(0, 0, 0, 0.74);
+      z-index: 4;
+      opacity: 0;
+      transition: opacity .3s;
+
+      p{
+        font-size: 2.6rem;
       }
     }
   }

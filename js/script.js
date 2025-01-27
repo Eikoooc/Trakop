@@ -67,9 +67,9 @@ function toggleItemName() {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
+  setupMachineryItems();
   toggleItemName();
   toggleCardDec();
-  setupMachineryItems();
   toggleMenuButton();
   handleScrollNav();
   smoothScrollToSection();
@@ -146,7 +146,6 @@ function setupMachineryItems() {
       const isExpanded = item.classList.contains("expanded");
       const content = item.querySelector(".machinery__content");
       const triangle = item.querySelector(".machinery__triangle");
-
       if (isExpanded) {
         item.classList.remove("expanded");
         content.style.display = "none";
