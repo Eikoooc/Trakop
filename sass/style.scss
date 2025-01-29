@@ -323,7 +323,7 @@ p{
       display: flex;
       justify-content: space-evenly;
       list-style: none;
-      .nav-item {
+      .nav-item, .nav__item{
         padding: 1em;
         font-size: 2.3rem;
         text-shadow: 0px 0px 10px rgb(3, 3, 3, 0.9);
@@ -336,7 +336,7 @@ p{
         }
       }
 
-      .nav-item:hover a {
+      .nav-item:hover a, .nav__item:hover a {
         color: #f7b939;
       }
     }
@@ -467,15 +467,15 @@ p{
           }
 
           .one {
-            background-image: url("../img/Wywrotka.jpg");
+            background-image: url("../img/oferts/wywrotka.jpg");
           }
 
           .two {
-            background-image: url("../img/rozbiórki.jpg");
+            background-image: url("../img/oferts/Robiorki.jpg");
           }
 
           .three {
-            background-image: url("../img/digger.jpg");
+            background-image: url("../img/oferts/PraceZiemnee.jpg");
           }
 
           .ofert-title {

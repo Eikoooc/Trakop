@@ -300,6 +300,25 @@ body {
   display: flex;
   justify-content: space-evenly;
   text-transform: uppercase;
+  z-index: 1;
+
+  .backPhoto, .backPhoto2{
+    position: absolute;
+    height: 750px;
+    z-index: -1;
+  }
+
+  .backPhoto{
+    top: 13em;
+    left: -15em;
+    transform: rotateY(180deg) rotate(20deg);
+
+  }
+  .backPhoto2{
+    right: -10em;
+    top: -4em;
+    transform: rotate(-20deg);
+  }
 
   .card-dec {
     display: none;

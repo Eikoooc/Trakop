@@ -277,6 +277,22 @@ body {
   display: flex;
   justify-content: space-evenly;
   text-transform: uppercase;
+  z-index: 1;
+}
+.services .backPhoto, .services .backPhoto2 {
+  position: absolute;
+  height: 750px;
+  z-index: -1;
+}
+.services .backPhoto {
+  top: 13em;
+  left: -15em;
+  transform: rotateY(180deg) rotate(20deg);
+}
+.services .backPhoto2 {
+  right: -10em;
+  top: -4em;
+  transform: rotate(-20deg);
 }
 .services .card-dec {
   display: none;
@@ -523,6 +539,9 @@ h2 a {
   }
 }
 @media (width <= 992px) {
+  .machinery .machinery__content-title {
+    opacity: 1;
+  }
   .nav .container {
     padding: 0;
   }

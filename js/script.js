@@ -114,6 +114,7 @@ function toggleCardDec() {
   const services = document.querySelectorAll(".service");
   const cardDecs = document.querySelectorAll(".card-dec");
   let isCardDecOpen = false;
+  let openCardDec = null;
 
   services.forEach((service) => {
     const serviceClass = service.classList[1].replace("-ser", "");
@@ -122,10 +123,12 @@ function toggleCardDec() {
     if (!service || !cardDec) return;
 
     service.addEventListener("click", () => {
-      if (!isCardDecOpen) {
-        cardDec.style.display = "flex";
-        isCardDecOpen = true;
+      if (isCardDecOpen && openCardDec !== cardDec) {
+        openCardDec.style.display = "none";
       }
+      cardDec.style.display = "flex";
+      isCardDecOpen = true;
+      openCardDec = cardDec;
     });
 
     const backBtn = cardDec.querySelector(".back");
@@ -133,6 +136,7 @@ function toggleCardDec() {
       backBtn.addEventListener("click", () => {
         cardDec.style.display = "none";
         isCardDecOpen = false;
+        openCardDec = null;
       });
     }
   });
