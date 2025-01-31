@@ -569,24 +569,11 @@ h2 a {
   }
 }
 @media (width <= 786px) {
-  .nav__phone {
+  .machinery__content-title p {
+    font-size: 2rem;
+  }
+  nav__phone {
     left: 55%;
-  }
-  .owl-prev,
-  .owl-next {
-    padding: 8px 16px;
-    font-size: 16px;
-  }
-  .owl-prev {
-    left: -30px;
-  }
-  .owl-next {
-    right: -30px;
-  }
-  .outer-image-box {
-    top: 82em;
-    height: 32em;
-    width: 60%;
   }
   .header .header-text .title {
     font-size: 6.4rem;
@@ -609,23 +596,6 @@ h2 a {
   }
 }
 @media (width <= 576px) {
-  .realisations .section-title {
-    margin-left: 30px;
-  }
-  .owl-prev,
-  .owl-next {
-    padding: 6px 12px;
-    font-size: 14px;
-  }
-  .owl-prev {
-    left: -20px;
-  }
-  .owl-next {
-    right: -20px;
-  }
-  .outer-image-box {
-    display: none;
-  }
   .header .header-text {
     top: 65%;
   }
