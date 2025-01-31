@@ -277,6 +277,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   text-transform: uppercase;
+  overflow: hidden;
   z-index: 1;
 }
 .services .backPhoto, .services .backPhoto2 {
@@ -596,6 +597,9 @@ h2 a {
   }
 }
 @media (width <= 576px) {
+  .outer-image-box {
+    display: none;
+  }
   .header .header-text {
     top: 65%;
   }

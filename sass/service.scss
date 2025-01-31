@@ -300,6 +300,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   text-transform: uppercase;
+  overflow: hidden;
   z-index: 1;
 
   .backPhoto, .backPhoto2{

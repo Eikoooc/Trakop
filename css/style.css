@@ -844,6 +844,9 @@ p {
   }
 }
 @media (width <= 576px) {
+  .outer-image-box {
+    display: none;
+  }
   .header .header-text {
     top: 65%;
   }
