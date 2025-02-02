@@ -489,13 +489,13 @@ p{
     }
   }
   .ofert-button {
-    font-family: "PT Sans";
+    font-family: "PT Sans Caption", sans-serif; // Restored font family
     position: relative;
     bottom: -5em;
     width: 200px;
     height: 60px;
     font-size: 18px;
-    letter-spacing: 0.5px;
+    // letter-spacing: 0.5px;
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 10px;
